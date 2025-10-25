@@ -1,0 +1,23 @@
+package android.support.v4.media.session;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.support.v4.media.session.MediaSessionCompat;
+
+/* loaded from: classes.dex */
+class b implements Parcelable.Creator<MediaSessionCompat.QueueItem> {
+    b() {
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // android.os.Parcelable.Creator
+    public MediaSessionCompat.QueueItem createFromParcel(Parcel parcel) {
+        return new MediaSessionCompat.QueueItem(parcel);
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // android.os.Parcelable.Creator
+    public MediaSessionCompat.QueueItem[] newArray(int i2) {
+        return new MediaSessionCompat.QueueItem[i2];
+    }
+}
