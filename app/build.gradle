@@ -3,18 +3,17 @@ plugins {
 }
 
 android {
-	namespace "com.innovaticx.strike_pros"
+    namespace "com.innovaticx.strike_pros"
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId 'com.innovaticx.strike_pros'
+        applicationId "com.innovaticx.strike_pros"
         minSdkVersion 21
         //noinspection ExpiringTargetSdkVersion,ExpiredTargetSdkVersion
         targetSdkVersion 29
         versionCode 2106
         versionName "1.0.6"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -29,15 +28,20 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    lintOptions {
+    lint {
         abortOnError false
     }
 
     buildFeatures {
         buildConfig = false
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/lib']
+        }
+    }
 }
 
 dependencies {
-    // TODO: dependencies
 }
